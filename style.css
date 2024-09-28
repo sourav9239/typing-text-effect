@@ -1,0 +1,30 @@
+/* Styling for the typing effect */
+.typing-container {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 2em;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid black;
+  width: 0;
+  animation: typing 6s steps(57, end), blink .75s step-end infinite;
+}
+
+@keyframes typing {
+  from { width: 0; }
+  to { width: 40ch; } /* Adjust width to fit the length of the sentence */
+}
+
+@keyframes blink {
+  from { border-color: transparent; }
+  to { border-color: black; }
+}
+
+/* Centering the text on the page */
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: #f0f0f0;
+}
